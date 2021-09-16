@@ -1,0 +1,178 @@
+body.base { 
+	background-color: lightblue;
+	margin: 0px;
+	padding: 0px;
+	background: url('../images/fondo.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+  	background-position: center center;
+  	text-align: center;
+}
+
+div.base {
+	margin: 1% auto;
+	width: 100%;
+	height: 85%;
+	background: rgba(255, 255, 255, 0.0);
+	text-align:center;
+}
+
+
+/*	CONTENEDOR DE contenido  	BEGIN	*/
+div.contenido_form {
+	background-color: rgba(255, 255, 255, 0.5);
+	height: auto;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 0px black;
+}
+
+/*	CONTENEDOR DE contenido  	END	*/
+
+/*	CONTENEDOR DE contenido  full	BEGIN	*/
+div.contenido_form_full {
+	background-color: rgba(255, 255, 255, 0.5);
+	height: auto;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 0px black;
+
+}
+
+div.title_font{
+	font-size: 17px;
+	font-weight: bold;
+	margin: 3px 3px 3px 3px;
+	border-bottom: 1px solid #999;
+  	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+/*	CONTENEDOR DE contenido  full	END	*/
+
+
+/*	CONTENEDOR DE footer  	BEGIN	*/
+div.contenido_footer {
+	background-color: rgba(255, 255, 255, 0.5);
+	height: auto;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 0px black;
+	margin-bottom: 1px;
+}
+
+/*	CONTENEDOR DE footer  	END	*/
+
+
+/*	BARRA DE NAVEGACION		BEGIN*/
+
+ul.navbar {	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+.navbar li {
+	display: inline;	
+	float: left;
+}
+
+#right_navbar{
+	display: inline;	
+	float: right;
+	background-color: #777;
+}
+#right_navbar a:hover{
+	background-color: #444;	
+}
+
+
+.navbar p{
+	float: right;
+	color: white;
+	font-size: 15px;
+	font-family: monospace;
+}
+
+.navbar a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar a:hover {
+	background-color: #111;
+}
+
+/*	BARRA DE NAVEGACION		END*/
+
+
+
+/*	CONTENEDOR GENERAL PANTALLA DIVIDIA IZQ 50% - DER 50%	BEGIN*/
+
+div.halfleft {
+	width: 49.8%;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.5);
+	float: left;
+}
+
+div.halfright{
+	width: 49.8%;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.0);
+	float: right;
+}
+/*	CONTENEDOR GENERAL PANTALLA DIVIDIA IZQ 50% - DER 50%	END*/
+
+
+
+/*	TABLA DE DATOS 	 BEGIN*/
+
+div.table_container {
+	width: 100%;
+	height: auto;
+	overflow-y:auto;
+}
+
+table.tabla {
+	/*background-color: white;*/
+	background-color: rgba(255, 255, 255, 0.0);
+	width: 99.9%;
+   	border: 1px solid #999;
+   	text-align: left;
+   	border-collapse: collapse;
+   	/*margin: 0 auto;*/
+   	margin: 1px;
+   	overflow: scroll;
+}
+
+.tabla th {
+	border-bottom: 1px solid #999;
+  	background-color: black;
+	color: white;
+	text-align: center;
+	position: -webkit-sticky;
+  	position: sticky;
+	top: 0;
+}
+
+.tabla td{
+	border-bottom: 1px solid #999;
+  	text-align: center;
+}
+
+.tabla tr:hover {
+	background-color: rgba(100, 100, 100, 0.5);
+	color: white;
+}
+
+/*	TABLA DE DATOS 	 END*/

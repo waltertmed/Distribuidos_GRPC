@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class='contenido_form'>	
+	<div class='table_container'>
+		{% if msg %}
+		Medicamentos del tipo {{msg[0].tipo_medicamento.tipo_medicamento}}
+		{% endif %}
+			<table class="tabla">
+				<tr>
+					<th>NOMBRE COMERCIAL</th>
+					<th>CODIGO</th>
+					<th>DROGA</th>
+					<th>TIPO DE MEDICAMENTO</th>
+
+				</tr>
+
+				{% for item in msg %}
+				<tr>
+					<td>{{item.nombre_comercial}}</td> 
+					<td>{{item.codigo}}</td> 
+					<td>{{item.droga}}</td> 
+					<td>{{item.tipo_medicamento.tipo_medicamento}}</td> 
+				<td>
+				{% endfor %}
+			</table>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+<html>
+ 
+<head>
+	<title>gRPC Client</title>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />	
+</head>
+
+<body class="base">
+
+	<div class="base">
+
+		<ul class="navbar">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('altaTipo_form') }}">Alta Tipo</a></li>
+            <li><a href="{{ url_for('bajaTipo_form') }}">Baja Tipo</a></li>
+            <li><a href="{{ url_for('altaMed_form') }}">Alta Medicamento</a></li>
+            <li><a href="{{ url_for('consTipo_form') }}">Consulta Tipo</a></li>
+            <li><a href="{{ url_for('consNombComerc_form') }}">Consulta Nombre Comercial</a></li>
+            <li><a href="{{ url_for('consCodigo_form') }}">Verificacion Codigo</a></li>
+    	</ul>
+		
+
+		<br></br>
+		
+			{% block content %}
+
+			{% endblock %}
+	</div>
+	
+</body>
+
+<footer>
+	<div class='contenido_footer'>
+		<p>CLIENTE - SIST DISTRIBUIDOS - UNLA 2021</p>		
+	</div>
+</footer>
+
+
+</html>

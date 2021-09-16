@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class='contenido_form'>	
+	<form action="/altaMed_msg" method="POST">
+		<label for="codigo"> Ingresa el codigo del Medicamento (XXX-NNNNN-Y)</label>
+		<input type="text" name="codigo"> </br>
+
+		<label for="nombre_comercial"> Ingresa el nombre comercial del Medicamento </label>
+		<input type="text" name="nombre_comercial"> </br>
+
+		<label for="droga"> Ingresa el nombre de la droga del Medicamento </label>
+		<input type="text" name="droga"> </br>
+
+		<label for="tipo_medicamento"> Ingresa el tipo de Medicamento</label>
+		<input type="text" name="tipo_medicamento"> </br>
+
+		<input type="submit" value="Enviar">
+	</form>
+</div>
+
+{% endblock %}

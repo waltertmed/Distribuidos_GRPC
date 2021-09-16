@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class='contenido_form'>	
+	<form action="/consNombComerc_msg" method="POST">
+		<label for="nombre_comercial"> Ingresa el/parte_del NOMBRE COMERCIAL del medicamento a filtrar </label>
+		<input type="text" name="nombre_comercial"> </br>
+
+		<input type="submit" value="Enviar">
+	</form>
+</div>	
+{% endblock %}

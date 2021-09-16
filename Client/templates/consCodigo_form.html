@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class ="halfleft">
+	<div class='table_container'>
+		<table class="tabla">
+			<tr>
+				<th>NOMBRE COMERCIAL</th>
+				<th>CODIGO</th>
+				<th>DROGA</th>
+				<th>TIPO DE MEDICAMENTO</th>
+
+			</tr>
+
+			{% for item in msg %}
+			<tr>
+				<td>{{item.nombre_comercial}}</td> 
+				<td>{{item.codigo}}</td> 
+				<td>{{item.droga}}</td> 
+				<td>{{item.tipo_medicamento.tipo_medicamento}}</td> 
+			<td>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+
+<div class="halfright">
+	<div class='contenido_form_full'>
+		<div class= "title_font">
+			VERIFICAR PRIORIDAD
+		</div>
+		<form action="/consCodigo_msg" method="POST">
+			<label for="codigo_geografico_prioridad"> Ingresa el CODIGO del producto a verificar prioridad</label>
+			<input type="text" name="codigo_geografico_prioridad"> </br>
+
+			<input type="submit" value="Enviar">
+		</form>
+	</div>
+
+	<div class='contenido_form_full'>
+		<div class= "title_font">
+			VERIFICAR CODIGO VERIFICADOR
+		</div>
+		<form action="/consCodigoVerif_msg" method="POST">
+			<label for="codigo_geografico_verificador"> Ingresa el CODIGO del producto a verificar codigo verificador</label>
+			<input type="text" name="codigo_geografico_verificador"> </br>
+
+			<input type="submit" value="Enviar">
+		</form>
+	</div>
+</div>
+
+{% endblock %}

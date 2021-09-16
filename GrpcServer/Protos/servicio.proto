@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+message Tipo{
+	string tipo_medicamento = 1;
+	bool activo = 2;
+}
+
+message Medicamento{
+	string nombre_comercial = 1;
+	string codigo = 2;
+	string droga = 3;
+	Tipo tipo_medicamento = 4;
+}
+
+message Confirmacion{
+	string confirmacion = 1;
+}
+
+message ConsultaTipo{
+	string confirmacion = 1;
+}
+
+message ListaMedicamentos{
+	repeated Medicamento lst_medicamentos = 1;
+}
+
+message RespuestaCodigo{
+	bool respuesta = 1;
+}
+
+message Nulo{
+}
+
+service Farmaceutica {
+	rpc Listo(Nulo) returns (Nulo);
+
+	rpc AltaTipoMedicamento(Tipo) returns (Confirmacion);
+	rpc BajaTipoMedicamento(Tipo) returns (Confirmacion);
+	rpc AltaMedicamento(Medicamento) returns (Confirmacion);
+	rpc ConsultaMedicamentoPorTipo(ConsultaTipo) returns (ListaMedicamentos);
+	rpc ConsultaMedicamentoPorNombreComercial(ConsultaTipo) returns (ListaMedicamentos);
+
+	rpc ListaProductos(Nulo) returns (ListaMedicamentos);
+	rpc EsPrioritario(ConsultaTipo) returns (RespuestaCodigo);
+	rpc Verificar(ConsultaTipo) returns (RespuestaCodigo);
+}
